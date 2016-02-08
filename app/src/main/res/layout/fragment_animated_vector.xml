@@ -4,4 +4,11 @@
              android:layout_height="match_parent"
              tools:context="com.silmood.vektr.AnimatedVectorFragment">
 
+    <ImageView
+        android:id="@+id/animated_android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/animated_android"/>
+
 </FrameLayout>

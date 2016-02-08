@@ -1,11 +1,15 @@
 package com.silmood.vektr;
 
 
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 
 /**
@@ -13,6 +17,7 @@ import android.view.ViewGroup;
  */
 public class AnimatedVectorFragment extends PagerFragment{
 
+    ImageView mAnimatedAndroid;
 
     public AnimatedVectorFragment() {
         // Required empty public constructor
@@ -22,8 +27,16 @@ public class AnimatedVectorFragment extends PagerFragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_animated_vector, container, false);
+        View root = inflater.inflate(R.layout.fragment_animated_vector, container, false);
+
+        mAnimatedAndroid = (ImageView) root.findViewById(R.id.animated_android);
+
+        Drawable drawable = mAnimatedAndroid.getDrawable();
+        if (drawable instanceof Animatable){
+            ((Animatable)drawable).start();
+        }
+
+        return root;
     }
 
     @Override
