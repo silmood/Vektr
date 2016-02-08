@@ -7,7 +7,7 @@
         android:name="arms"/>
 
     <target
-        android:animation="@animator/circle"
+        android:animation="@animator/diagonal"
         android:name="eyes"/>
 
 </animated-vector>
