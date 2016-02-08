@@ -6,4 +6,8 @@
         android:animation="@animator/shrug"
         android:name="arms"/>
 
+    <target
+        android:animation="@animator/circle"
+        android:name="eyes"/>
+
 </animated-vector>
