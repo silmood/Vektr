@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupTabs(TabLayout tabLayout, ViewPager viewPager, FragmentPagerAdapter adapter) {
         viewPager.setAdapter(adapter);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabLayout.setupWithViewPager(viewPager);
     }
 
