@@ -34,6 +34,8 @@ public class ShapeTransformationFragment extends PagerFragment{
         mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mPlayButton.setSelected(!mPlayButton.isSelected());
+                mPlayButton.setImageResource(mPlayButton.isSelected() ? R.drawable.animated_play_arrow : R.drawable.animated_stop);
                 Drawable drawable = mPlayButton.getDrawable();
                 if (drawable instanceof Animatable)
                     ((Animatable)drawable).start();
