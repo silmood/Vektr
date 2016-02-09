@@ -15,7 +15,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final Class[] CLASSES_FRAGMENTS = {SimpleVectorFragment.class, AnimatedVectorFragment.class};
+    private final Class[] CLASSES_FRAGMENTS = {SimpleVectorFragment.class, AnimatedVectorFragment.class, ShapeTransformationFragment.class};
 
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupTabs(TabLayout tabLayout, ViewPager viewPager, FragmentPagerAdapter adapter) {
         viewPager.setAdapter(adapter);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabLayout.setupWithViewPager(viewPager);
     }
 
